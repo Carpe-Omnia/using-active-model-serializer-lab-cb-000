@@ -21,7 +21,7 @@ $(function() {
         var ordersText = data["orders"].map(function(order){
           return '<li class="order">' + 'id: ' + order["id"] + ', created at: ' + order["created_at"] + '</li>'
         })
-        $('#orders').html(orderText);
+        $('#orders').html(ordersText);
     });
   });
 });
