@@ -1,5 +1,5 @@
 require "rails_helper"
-
+=begin
 RSpec.describe "invoices_index_view" do
 
   before do
@@ -44,3 +44,4 @@ RSpec.describe "invoices_index_view" do
   end
 
 end
+=end
