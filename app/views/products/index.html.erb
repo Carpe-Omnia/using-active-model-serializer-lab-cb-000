@@ -3,6 +3,8 @@
   <h3><%= product.name %></h3>
   <div id="product-<%= product.id %>"><%= truncate(product.description) %></div>
   <button class="js-more" data-id="<%= product.id %>">More Info</button>
+  <ul id="orders" >
+  </ul>  
 <% end %>
 
 <script type="text/javascript" charset="utf-8">
@@ -16,6 +18,10 @@ $(function() {
         }
         var descriptionText = "<p>" + data["description"] + "</p><p>" + inventoryText + "</p>";
         $("#product-" + id).html(descriptionText);
+        var ordersText = data["orders"].map(function(order){
+          return '<li class="order">' + 'id: ' + order["id"] + ', created at: ' + order["created_at"] + '</li>'
+        })
+        $('#orders').html(orderText);
     });
   });
 });
